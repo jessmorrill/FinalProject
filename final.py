@@ -98,8 +98,8 @@ ax.set_xlabel('Mental Health Status')
 ax.set_ylabel('Average Hours')
 ax.set_title('Average Screen Time Makeup by Mental Health Status')
 ax.legend()
-st.write("As seen in this chart, there is very little difference in screen time makeup across all mental health statuses. This is surprising and contradicts our original prediction. Most people achieve a static balance between technology, gaming, and social media.")
 st.pyplot(fig)
+st.write("As seen in this chart, there is very little difference in screen time makeup across all mental health statuses. This is surprising and contradicts our original prediction. Most people achieve a static balance between technology, gaming, and social media.")
 
 ##Plot Three From Our Slideshow
 st.title("How does someone's age and gender impact their screen time hours?")
