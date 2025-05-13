@@ -98,7 +98,7 @@ ax.set_xlabel('Mental Health Status')
 ax.set_ylabel('Average Hours')
 ax.set_title('Average Screen Time Makeup by Mental Health Status')
 ax.legend()
-
+st.write("As seen in this chart, there is very little difference in screen time makeup across all mental health statuses. This is surprising and contradicts our original prediction. Most people achieve a static balance between technology, gaming, and social media.")
 st.pyplot(fig)
 
 ##Plot Three From Our Slideshow
@@ -138,6 +138,7 @@ ax.set_ylabel('Frequency')
 ax.set_title(f'Distribution of Total Screen Time\n(Gender: {gender_filter}, Age Group: {age_filter})')
     
 st.pyplot(fig)
+st.write("This chart shows how often people are on screens by their age. This is meant to address the hypothesis that younger age groups are on screens longer.")
 st.title("Social Media Platform Usage vs. Depression Levels")
 
 df = pd.read_csv("smmh.csv")
@@ -189,7 +190,7 @@ if df is not None:
         color_discrete_sequence=["#636EFA"]
     )
     st.plotly_chart(fig)
-
+    st.write("This chart looks at what social media are being reported by those who feel depressed. Snapchat and Tiktok stand out as having high numbers of users who report feeling depressed.")
 time_mapping = {
     'Less than an Hour': 0.5,
     'Between 2 and 3 hours': 2.5,
@@ -263,6 +264,7 @@ fig.update_layout(
     showlegend=False
 )
 st.plotly_chart(fig)
+st.write("This chart explores if high social media usage leads to sleep issues across all ages. As seen, all ages show a clear upward trend in reported issues sleeping as they spend more time on social media.")
 
 df = df.dropna(subset=['2. Gender', '15. On a scale of 1-5, how often do you compare yourself to other successful people through the use of social media?'])
 
@@ -347,3 +349,4 @@ for i, gender in enumerate(genders):
 
 plt.tight_layout()
 st.pyplot(fig)
+"This final bar chart looks at how often different genders and ages are using social media to compare themselves to other. As can be seen, younger ages are much more frequently comparing themselves to more successful people online."
